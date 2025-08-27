@@ -2,7 +2,7 @@
 
 A modern WhatsApp-style chat interface for any AI bot, built with React and TypeScript. This project provides a complete, customizable chat interface that can be easily integrated with any AI service or webhook endpoint.
 
-**Created by:** [Pinto Alpha Apps](https://github.com/pinto-alpha-apps) Team
+**Created by:** [Pinto Alpha Apps](https://www.alpha-apps.ae/) Team
 
 ## 🚀 Features
 
@@ -223,7 +223,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🏢 About Pinto Alpha Apps
 
-This project is developed and maintained by the **Pinto Alpha Apps** team. We specialize in creating modern, scalable web applications and AI-powered solutions.
+This project is developed and maintained by the **Pinto Alpha Apps** team. with love ❤️  https://www.alpha-apps.ae/ .
 
 ---
 
