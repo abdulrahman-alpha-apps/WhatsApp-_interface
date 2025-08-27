@@ -1,6 +1,12 @@
 # WhatsApp-Style AI Chat Interface
 
 A modern WhatsApp-style chat interface for any AI bot, built with React and TypeScript. This project provides a complete, customizable chat interface that can be easily integrated with any AI service or webhook endpoint.
+This project is made to setup an Ai bot very fast
+here is alive demo for the intherface
+https://whatapp-ai-interface.vercel.app/
+plase note this version ai have been disabled
+
+
 
 **Created by:** [Pinto Alpha Apps](https://www.alpha-apps.ae/) Team
 
