@@ -3,8 +3,8 @@ import { Phone, Send, ArrowLeft, Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
-// Using the uploaded ATM logo
-const atmLogoUrl = '/tayer.png';
+// Bot logo - replace with your own
+const botLogoUrl = '/tayer.png';
 
 interface Message {
   id: string;
@@ -17,7 +17,7 @@ const WhatsAppChat = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: 'Hello! I\'m your ATM service assistant. How can I help you book a car service appointment today?',
+      text: 'Hello! I\'m your AI assistant. How can I help you today?',
       sender: 'agent',
       timestamp: new Date()
     }
@@ -52,22 +52,22 @@ const WhatsAppChat = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://yourapp.n8n.cloud/webhook/your-webhook-name', {
+      const response = await fetch('https://your-webhook-url.com/webhook/endpoint', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           messagebody: messageText,
-          phone_Number: '095377193888',
-          user_id: '1001',
+          phone_Number: 'your-phone-number',
+          user_id: 'your-user-id',
           sessionId: sessionId
         })
       });
 
       if (response.ok) {
         const contentType = response.headers.get('content-type');
-        let agentReply = 'Thank you for your message. I\'ll help you with your car service appointment.';
+        let agentReply = 'Thank you for your message. How can I assist you today?';
         
         try {
           if (contentType && contentType.includes('application/json')) {
@@ -154,7 +154,7 @@ const WhatsAppChat = () => {
     
     toast({
       title: 'Voice Call Started',
-      description: 'Connecting you to ATM voice assistant...'
+      description: 'Connecting you to AI voice assistant...'
     });
   };
 
@@ -173,12 +173,12 @@ const WhatsAppChat = () => {
         </Button>
         <div className="flex items-center space-x-3 flex-1">
           <img 
-            src={atmLogoUrl} 
-            alt="ATM" 
+            src={botLogoUrl} 
+            alt="AI Assistant" 
             className="w-10 h-10 rounded-full"
           />
           <div className="flex-1">
-            <h1 className="font-medium text-white text-[17px] leading-tight">ATM Service</h1>
+            <h1 className="font-medium text-white text-[17px] leading-tight">AI Assistant</h1>
             <p className="text-sm text-white/80 leading-tight">online</p>
           </div>
         </div>

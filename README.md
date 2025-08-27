@@ -1,13 +1,13 @@
-# ATM Car Service Assistant
+# WhatsApp-Style AI Chat Interface
 
-A modern WhatsApp-style chat interface for car service appointment booking, powered by AI and built with React. This project serves as a **demo chatbot** that can be easily customized for any business or use case.
+A modern WhatsApp-style chat interface for any AI bot, built with React and TypeScript. This project provides a complete, customizable chat interface that can be easily integrated with any AI service or webhook endpoint.
 
 **Created by:** [Pinto Alpha Apps](https://github.com/pinto-alpha-apps) Team
 
 ## 🚀 Features
 
 - **WhatsApp-Style Interface**: Familiar chat UI with authentic WhatsApp design elements
-- **AI-Powered Assistant**: Intelligent conversation flow for booking appointments via webhook integration
+- **AI-Powered Assistant**: Intelligent conversation flow via webhook integration with any AI service
 - **Voice Call Integration**: ElevenLabs ConvAI widget for voice interactions
 - **Dynamic Sessions**: Unique session IDs generated on each page refresh
 - **Real-time Messaging**: Instant responses with typing indicators and message status
@@ -39,7 +39,7 @@ A modern WhatsApp-style chat interface for car service appointment booking, powe
 1. **Clone the repository**
    ```bash
    git clone <YOUR_GIT_URL>
-   cd ATM-cars
+   cd whatsapp-ai-chat-interface
    ```
 
 2. **Install dependencies**
@@ -87,16 +87,16 @@ src/
 
 ### Branding & Assets
 
-1. **Logo**: Replace `/public/tayer.png` with your company logo
+1. **Logo**: Replace `/public/tayer.png` with your bot/company logo
 2. **Favicon**: Replace `/public/favicon.ico` with your favicon
 3. **App Title**: Update in `index.html` (line 7)
-4. **Company Name**: Update throughout the codebase (search for "ATM")
+4. **Bot Name**: Update throughout the codebase to match your AI assistant's name
 
 ### Visual Customization
 
 - **Colors**: Modify Tailwind classes in components (WhatsApp green: `#075e54`)
 - **Welcome Message**: Update in `WhatsAppChat.tsx` (line 20)
-- **Header Title**: Update in `WhatsAppChat.tsx` (line 159)
+- **Header Title**: Update in `WhatsAppChat.tsx` (line 181)
 
 ### Contact Information
 
@@ -132,8 +132,8 @@ const response = await fetch('https://your-webhook-url.com/webhook/endpoint', {
   },
   body: JSON.stringify({
     messagebody: messageText,
-    phone_Number: '095377193888',
-    user_id: '1001',
+    phone_Number: 'your-phone-number',
+    user_id: 'your-user-id',
     sessionId: sessionId  // ⚠️ This changes on each page refresh
   })
 });
@@ -160,8 +160,8 @@ Your webhook will receive the following JSON payload:
 ```json
 {
   "messagebody": "User's message text",
-  "phone_Number": "095377193888",
-  "user_id": "1001",
+  "phone_Number": "your-phone-number",
+  "user_id": "your-user-id",
   "sessionId": "session_1724756891234_k3m9x7q2p"
 }
 ```
@@ -233,10 +233,10 @@ This project is developed and maintained by the **Pinto Alpha Apps** team. We sp
 
 - [ ] Clone and install dependencies
 - [ ] Update webhook URL in `WhatsAppChat.tsx`
-- [ ] Replace logo (`/public/tayer.png`)
+- [ ] Replace logo (`/public/tayer.png`) with your bot logo
 - [ ] Replace favicon (`/public/favicon.ico`)
 - [ ] Update ElevenLabs agent ID (if using voice)
-- [ ] Update company branding and contact info
+- [ ] Update bot branding and contact info
 - [ ] Test webhook integration
 - [ ] Build and deploy
 
